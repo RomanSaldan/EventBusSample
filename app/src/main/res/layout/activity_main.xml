@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity"
+    android:id="@+id/rlRoot_AM"
+    android:background="@color/colorPrimary">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cwStatus_AM"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="7dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tvClock_AM"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:id="@+id/tvBattery_AM"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardElevation="7dp"
+        android:id="@+id/cwImage_AM"
+        android:layout_below="@id/cwStatus_AM">
+
+        <fragment
+            android:name="com.lynx.ebsample2.fragments.FragmentImage"
+            android:id="@+id/fragmentImage_AM"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="7dp"
+            android:layout_below="@id/cwImage_AM"
+            android:id="@+id/view">
+
+            <fragment
+                android:name="com.lynx.ebsample2.fragments.FragmentButtons"
+                android:id="@+id/fragmentButtons_AM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+     </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
